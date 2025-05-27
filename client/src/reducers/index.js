@@ -1,8 +1,8 @@
 import {combineReducers} from "redux"
-import authreducer from "./auth"
-import currentuserreducer from "./currentuser";
-import usersreducer from "./users";
-import questionreducer from "./question";
+import authreducer from "./auth.js"
+import currentuserreducer from "./currentuser.js";
+import usersreducer from "./users.js";
+import questionreducer from "./question.js";
 
 export default combineReducers({
     authreducer,

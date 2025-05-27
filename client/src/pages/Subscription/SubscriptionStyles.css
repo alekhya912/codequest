@@ -1,0 +1,826 @@
+/* Subscription Styles */
+
+/* General Layout */
+.subscription-container,
+.payment-container,
+.confirmation-container,
+.subscription-status-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.subscription-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #232629;
+  text-align: center;
+}
+
+/* Time Restriction Banner */
+.time-restriction-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #fff8e6;
+  border: 1px solid #ffe4b5;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.time-restriction-banner p {
+  margin: 0;
+  color: #664d03;
+  font-size: 0.9rem;
+}
+
+/* Subscription Plans */
+.subscription-plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.plan-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e3e6e8;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.plan-card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: #232629;
+}
+
+.plan-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0a95ff;
+  margin-bottom: 1rem;
+}
+
+.plan-feature-main {
+  margin-bottom: 1rem;
+}
+
+.questions-per-day {
+  font-size: 1rem;
+  background-color: #f8f9f9;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.questions-per-day strong {
+  color: #0a95ff;
+  font-size: 1.1rem;
+}
+
+.plan-features {
+  list-style-type: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #3b4045;
+}
+
+.feature-icon {
+  color: #0a95ff;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.plan-button {
+  background-color: #0a95ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.plan-button:hover {
+  background-color: #0077cc;
+}
+
+.current-button {
+  background-color: #e3e6e8;
+  color: #6a737c;
+  cursor: default;
+}
+
+.current-button:hover {
+  background-color: #e3e6e8;
+}
+
+.popular-plan {
+  border: 2px solid #f48225;
+  box-shadow: 0 4px 16px rgba(244, 130, 37, 0.15);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #f48225;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.current-plan-badge {
+  position: absolute;
+  top: -12px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #2e7d32;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.current-plan {
+  border: 2px solid #2e7d32;
+}
+
+/* Subscription Note */
+.subscription-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+
+.subscription-note p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #3b4045;
+}
+
+/* Payment Gateway */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #0a95ff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.payment-summary {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  align-self: start;
+}
+
+.payment-summary h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e3e6e8;
+}
+
+.selected-plan {
+  margin-bottom: 1rem;
+}
+
+.selected-plan h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem;
+}
+
+.plan-benefits {
+  margin-bottom: 1.5rem;
+}
+
+.plan-benefits h4 {
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem;
+  color: #6a737c;
+}
+
+.plan-benefits ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.plan-benefits li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.plan-benefits li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0a95ff;
+}
+
+.payment-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #e3e6e8;
+  font-weight: 700;
+}
+
+.payment-form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.payment-form h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #3b4045;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e3e6e8;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #0a95ff;
+  box-shadow: 0 0 0 4px rgba(10, 149, 255, 0.1);
+}
+
+.card-input-container {
+  position: relative;
+}
+
+.card-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6a737c;
+}
+
+.card-input-container input {
+  padding-left: 3rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.payment-button {
+  background-color: #0a95ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.payment-button:hover {
+  background-color: #0077cc;
+}
+
+.payment-button:disabled {
+  background-color: #a8aaab;
+  cursor: not-allowed;
+}
+
+.payment-security-note {
+  text-align: center;
+  margin-top: 2rem;
+  color: #6a737c;
+  font-size: 0.85rem;
+}
+
+/* Confirmation Page */
+.confirmation-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.success-icon {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.confirmation-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.confirmation-plan-details,
+.payment-details {
+  max-width: 100%;
+}
+
+.confirmation-plan-details h2,
+.payment-details h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e3e6e8;
+}
+
+.plan-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.plan-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.plan-quota {
+  background-color: #f8f9f9;
+  padding: 0.75rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.billing-details {
+  margin-top: 1.5rem;
+}
+
+.billing-row,
+.payment-method,
+.payment-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.billing-label,
+.payment-label {
+  color: #6a737c;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid #e3e6e8;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #f6f6f6;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.primary-button {
+  background-color: #0a95ff;
+  color: white;
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: #0077cc;
+}
+
+.secondary-button {
+  background-color: white;
+  color: #3b4045;
+  border: 1px solid #e3e6e8;
+}
+
+.secondary-button:hover {
+  background-color: #f6f6f6;
+}
+
+.subscription-usage {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.subscription-usage h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+.usage-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.usage-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a95ff;
+}
+
+.usage-refresh {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #6a737c;
+}
+
+.usage-refresh p {
+  margin: 0;
+}
+
+/* Subscription Status Page */
+.subscription-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.current-plan-badge-large {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.question-quota-display {
+  text-align: center;
+}
+
+.question-quota-display h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  color: #3b4045;
+}
+
+.quota-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.used {
+  color: #0a95ff;
+}
+
+.separator {
+  margin: 0 0.25rem;
+  color: #6a737c;
+}
+
+.total {
+  color: #3b4045;
+}
+
+.unlimited {
+  color: #0a95ff;
+}
+
+.quota-reset {
+  font-size: 0.8rem;
+  color: #6a737c;
+  margin: 0;
+}
+
+.subscription-details-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.subscription-details-card h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e3e6e8;
+}
+
+.subscription-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  margin-bottom: 0.5rem;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #6a737c;
+  margin-bottom: 0.25rem;
+}
+
+.info-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3b4045;
+}
+
+.plan-features-list {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e3e6e8;
+}
+
+.plan-features-list h3 {
+  font-size: 1rem;
+  margin: 0 0 1rem;
+}
+
+.plan-features-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.plan-features-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.plan-features-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #0a95ff;
+  font-weight: 700;
+}
+
+.subscription-actions-card {
+  background-color: #f8f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.action-info h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.action-info p {
+  margin: 0;
+  color: #3b4045;
+  max-width: 400px;
+}
+
+.upgrade-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #0a95ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upgrade-button:hover {
+  background-color: #0077cc;
+}
+
+.payment-history {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.payment-history h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+}
+
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-table th,
+.payment-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e3e6e8;
+}
+
+.payment-table th {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6a737c;
+}
+
+.payment-status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.payment-status.success {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+}
+
+.table-action {
+  background: none;
+  border: none;
+  color: #0a95ff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.empty-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #6a737c;
+}
+
+.empty-history p {
+  margin: 0.5rem 0 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .payment-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .confirmation-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .subscription-actions-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .action-buttons {
+    width: 100%;
+  }
+  
+  .upgrade-button {
+    width: 100%;
+  }
+  
+  .subscription-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.time-lock-overlay {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #c0392b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

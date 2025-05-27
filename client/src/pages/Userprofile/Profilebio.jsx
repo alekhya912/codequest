@@ -27,4 +27,4 @@ const Profilebio = ({currentprofile}) => {
   )
 }
 
-export default Profilebio
+export default Profilebio;

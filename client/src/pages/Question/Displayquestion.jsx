@@ -14,4 +14,4 @@ const Displayquestion = ({slidein}) => {
   )
 }
 
-export default Displayquestion
+export default Displayquestion;

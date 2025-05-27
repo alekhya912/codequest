@@ -1,0 +1,147 @@
+/* Fullscreen Modal Glass Style */
+.avatar-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Main Modal */
+.avatar-popup {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  width: 92%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Close Button */
+.close-popup {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-popup:hover {
+  color: #333;
+}
+
+/* Header */
+.avatar-popup h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Button Sets */
+.avatar-type-selector {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.avatar-type-selector button,
+.upload-button,
+.confirm-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #0a95ff, #0074cc);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(0, 149, 255, 0.25);
+}
+.avatar-type-selector button:hover,
+.upload-button:hover,
+.confirm-button:hover {
+  transform: scale(1.05);
+}
+
+/* File Upload Button */
+.upload-button {
+  margin-top: 10px;
+  background: #f48024;
+}
+.upload-button:hover {
+  background: #da6c1a;
+}
+
+/* Confirm Button */
+.confirm-button {
+  margin-top: 15px;
+  background: #28a745;
+}
+.confirm-button:hover {
+  background: #218838;
+}
+
+/* Scrollable Avatar Section */
+.avatar-scroll-section {
+  margin-top: 10px;
+}
+
+.avatar-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  scrollbar-width: none;
+}
+.avatar-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+  cursor: pointer;
+}
+.scroll-avatar:hover {
+  transform: scale(1.1);
+}
+.scroll-avatar.selected {
+  border-color: #0a95ff;
+}
+
+/* Preview Area */
+.avatar-preview-area {
+  margin-top: 20px;
+}
+
+.avatar-preview-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
